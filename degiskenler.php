@@ -1,18 +1,36 @@
 <?php
 
-    $ad = "Berat";
-    $soyad = "Aydogan";
+    $name = "Berat";
+    $sname = "Aydogan";
 
-    echo $ad." ".$soyad;
+    echo $name." ".$sname;
     echo "<br>";
 
-    $sayi1= 100;
-    $sayi2= 400;
-    $sayi3 = $sayi1+$sayi2;
-    echo $sayi1 + $sayi2; //500
+    $number1= 100;
+    $number2= 400;
+    $number3 = $number1+$number2;
+    echo $number1 + $number2; //500
     echo "<br>";
-    echo $sayi3; //500
+    echo $number3; //500
     echo "<br>";
-    echo $sayi1." ".$sayi2; //100 400
+    echo $number1." ".$number2; //100 400
+
+    echo "<br>";
+
+    // PHP VERİ TİPLERİ
+
+    //String
+    $productname = "Samsung S23";
+    //int
+    $price = 20000;
+    //double
+    $taxRate = 0.18;
+    //boolean
+    $isPurchased = true;
+    //object
+    //Array
+    //null
+    
+
 
 ?>
