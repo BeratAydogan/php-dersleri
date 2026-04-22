@@ -9,9 +9,7 @@
             </div>
             <div class="col-9">
                 <?php foreach ($kurslar as $kurs):?>
-                    <?php if($kurs["onay"]):?>
                 <?php include('partials/_kurs.php');?>
-                     <?php endif;?>   
                <?php endforeach;?>
             </div>
         </div>
