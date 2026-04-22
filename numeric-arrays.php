@@ -2,7 +2,7 @@
 
     //Diziler
         //Numeric Ddiziler
-        //Associative Diziler
+        //Associative Diziler 50.58
 
     //$students = "ali,ahmet,hasan"; YANLIS
 
