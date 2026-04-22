@@ -1,3 +1,31 @@
+<?php
+
+    $kategoriler = ["Programlara","Web Geliştirme","Mobil Ugulamalar","Ofis Ugulamalar"];
+    $kurslar = [
+        [
+            "id" => 1,
+            "baslik"=>"Web geliştirme kursu",
+            "aciklama"=>"güzel bir kurs",
+            
+        ],
+         [
+            "id" => 2,
+            "baslik"=>"Python kursu",
+            "aciklama"=>"güzel bir kurs",
+            
+        ],
+         [
+            "id" => 3,
+            "baslik"=>"Javascript kursu",
+            "aciklama"=>"güzel bir kurs",
+            
+        ],
+
+    ];
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,12 +55,17 @@
         <div class="row">
             <div class="col-3">
                 <div class="list-group">
-                    <a href="#" class="list-group-item list-group-item-action">Programlama</a>
-                    <a href="#" class="list-group-item list-group-item-action">Web Geliştirme</a>
-                    <a href="#" class="list-group-item list-group-item-action">Mobil Uygulama</a>
+                    <?php foreach($kategoriler as $kategori): ?>                    
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <?php echo $kategori;?>
+                    </a>
+                    <?php endforeach; ?>
                 </div>
             </div>
+
+
             <div class="col-9">
+                <?php foreach ($kurslar as $kurs):?>
                 <div class="card mb-3">
                     <div class="row">
                         <div class="col-md-3">
@@ -40,47 +73,16 @@
                         </div>
                         <div class="col-md-9">
                             <div class="card-body">
-                                <h5 class="card-title">Web geliştirme</h5>
+                                <h5 class="card-title"> <?php echo $kurs["baslik"];?></h5>
                                 <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt consequatur corporis optio quia excepturi ipsam quae quam architecto. Beatae, perspiciatis?
+                                    <?php echo $kurs["aciklama"];?>
                                 </p>
                             </div>
 
                         </div>
                     </div>
                 </div>
-                <div class="card mb-3">
-                    <div class="row">
-                        <div class="col-md-3">
-                            <img src="https://cdn-imgix.headout.com/tour/19364/TOUR-IMAGE/a0f87f7e-434d-4c3c-9584-f7ee351d5f64-10432-dubai-img-worlds-of-adventure---uae-resident-offer-01.jpg" alt="" class="img-fluid rounded-start">
-                        </div>
-                        <div class="col-md-9">
-                            <div class="card-body">
-                                <h5 class="card-title">Python Kursu</h5>
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt consequatur corporis optio quia excepturi ipsam quae quam architecto. Beatae, perspiciatis?
-                                </p>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="card mb-3">
-                    <div class="row">
-                        <div class="col-md-3">
-                            <img src="https://cdn-imgix.headout.com/tour/19364/TOUR-IMAGE/a0f87f7e-434d-4c3c-9584-f7ee351d5f64-10432-dubai-img-worlds-of-adventure---uae-resident-offer-01.jpg" alt="" class="img-fluid rounded-start">
-                        </div>
-                        <div class="col-md-9">
-                            <div class="card-body">
-                                <h5 class="card-title">Javascript kursu</h5>
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt consequatur corporis optio quia excepturi ipsam quae quam architecto. Beatae, perspiciatis?
-                                </p>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
+               <?php endforeach;?>
             </div>
 
         </div>
