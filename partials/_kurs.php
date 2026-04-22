@@ -6,7 +6,10 @@
                         </div>
                         <div class="col-md-9">
                             <div class="card-body">
-                                <h5 class="card-title"> <?php echo $kurs["baslik"];?></h5>
+                                <a href="kurs-detay.php?id=<?php echo $kurs["id"];?>">
+                                    <h5 class="card-title"> <?php echo $kurs["baslik"];?></h5>
+
+                                </a>
                                 <p>
                                     <?php echo $kurs["aciklama"];?>
                                 </p>
